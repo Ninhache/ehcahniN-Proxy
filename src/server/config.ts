@@ -1,15 +1,23 @@
-export interface Subroutes {
+export interface RedirectRoute {
     route: string;
-    redirectUrl: string;
+    target: string;
 }
 
-export const config: Subroutes[] = [
+export const subroutes: RedirectRoute[] = [
+    // {
+    //     route: "api",
+    //     redirectUrl: "http://localhost:8080/"
+    // },
+]
+
+export const routes: RedirectRoute[] = [
     {
-        route: "api",
-        redirectUrl: "http://localhost:3000/"
+        route: "users",
+        target: "https://jsonplaceholder.typicode.com/users"
     },
     {
-        route: "beta",
-        redirectUrl: "http://localhost:3001/"
-    }
+        route: "",
+        target: "http://localhost:3000/"
+    },
+    
 ]
